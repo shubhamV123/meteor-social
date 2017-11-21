@@ -15,6 +15,16 @@ Download or clone the project:
 ```bash
 $ git clone https://github.com/shubhamV123/meteor-social
 ```
+
+##### Note: change directory to meteor-social before going further installation.
+
+
+Install dependencies:
+
+```bash
+$ meteor npm install
+```
+
 Start the server by simply typing this:
 
 ```bash
