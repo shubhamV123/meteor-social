@@ -1,0 +1,21 @@
+<template name="navbar">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Welcome</a>
+          </div>
+          <ul class="nav navbar-nav">
+              {{#if currentUser}}
+            <li class="active"><a href="/dashboard">Home</a></li>
+            <li><a href="#" id="logout"><i class="fa fa-sign-out"></i>logout</a></li>
+            <li><a href="/profile">profile</a></li>
+            {{else}}
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </nav>
+    
+      
+</template>
