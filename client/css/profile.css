@@ -34,3 +34,6 @@ label:hover {
 	color: #5593c6;
 	border-color: #5593c6;
 } */
+#fileInput{
+	display: inline-block
+}

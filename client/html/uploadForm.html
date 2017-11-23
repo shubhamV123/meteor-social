@@ -1,0 +1,11 @@
+<template name="uploadForm">
+    {{#with currentUpload}}
+      Uploading <b>{{file.name}}</b>:
+      <span id="progress">{{progress.get}}%</span>
+    {{else}}
+     <center> 
+       <label for="file">Change profile picture:</label>
+      <input id="fileInput" type="file" />
+      </center>
+    {{/with}}
+  </template>

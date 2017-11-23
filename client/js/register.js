@@ -16,9 +16,7 @@ Template.register.events({
                     username:username,
                     email:email,
                     password:password,
-                    profile:{
-                        
-                    }
+                    profile:'default.png'
                 },function(err){
                     if(err){
                         Bert.alert(err.reason,'danger','growl-top-right');

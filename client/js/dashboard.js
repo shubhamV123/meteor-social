@@ -38,12 +38,14 @@ Template.dashboard.events({
         var Name = Meteor.user().username;
         var thisPostComment =  Posts.findOne({_id:this._id},{commented:{$in:Name}}).commented;
         var email=Meteor.user().emails[0].address;
+        var profile = Meteor.user().profile;
+        
         // console.log(thisUser,thisPost,postAuthor,Name,this._id,thisPostComment)
         
 
         // var post=event.target.commentPost.value;
         if(isNotEmpty(post)){
-            Meteor.call('addComments',post,thisUser,thisPost,postAuthor,Name,email);
+            Meteor.call('addComments',post,thisUser,thisPost,postAuthor,Name,email,profile);
             // Meteor.call('addComments', post);
             event.target.commentPost.value = '';
             Bert.alert('Your comment has been successfully submitted','success','growl-top-right');

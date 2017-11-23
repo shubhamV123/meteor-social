@@ -2,43 +2,16 @@
     {{#if currentUser}}
     <div class="profile">
         <center>
-            {{#with UserImages}}
-            <img src="{{image}}" class="profile-img" alt=""> {{else}}
-            <img src="github.svg" class="profile-img" alt="">
-            <!-- <form class="edit-profile" enctype="multipart/form-data">
-                <label for="profileImage">Choose Profile</label>
-                <span id="filename"></span>
-                <! <input type="file" id="upload"> -->
-                
-                <!-- <input type="file" name="profileImage" id="profileImage" class="profileImage black">
-                <button type="submit" value="Upload Photo" id="profile-btn" class="btn btn-sml btn-primary">Upload Photo</button>
-            </form>  -->
-            
-            {{/with}}
+            {{#if imageFile}}
+            <img src="{{imageFile}}" class="profile-img" alt="">
+            {{else}}
+            <img src="default.png" class="profile-img" alt="">
+            {{/if}}
+            {{> uploadForm}}
             <h1>{{username}}</h1>
             <h3>{{email}}</h3>
         </center>
     </div>
-    <script type="text/javascript">
-        $(function(){
-            $('#profileImage:file').on('change',function(){
-                var fileName = $(this).val();
-                // console.log('hello')
-                $('span').text(fileName);
-                $('label').hide();
-                // alert("hola");
-            });
-            // alert('hello')
-        });
-        // $("document").ready(function () {
-
-        //     $("#upload").change(function () {
-        //         alert('changed!');
-        //     });
-
-
-        // });
-    </script>
     {{else}}
     <h1 class="text-center">You are note logged in
         <a href="/">Login here</a>

@@ -18,6 +18,10 @@ Template.profile.helpers({
             return Meteor.user().username;
         }
     },
+    imageFile:function() {
+        console.log();
+        return Meteor.user().profile;
+      },
 });
 Template.profile.events({ 
     // 'submit .edit-profile': function(event) { 
