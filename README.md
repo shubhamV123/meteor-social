@@ -32,4 +32,3 @@ $ meteor or meteor run
 ```
 
 Once project is running create account and login. And after that you can post your feedback or comment on any feedback.
-
